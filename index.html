@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vending Machine - Guia Fit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Área da Vending Machine -->
+  <div id="vending-container">
+    <img id="vending-img" src="img/vending-machine.jpg" alt="Vending Machine">
+
+    <!-- Hotspots clicáveis posicionados sobre os produtos -->
+    <div class="hotspot" style="top: 21%; left: 38%;" data-id="13"></div>
+    <div class="hotspot" style="top: 35%; left: 24%;" data-id="22"></div>
+    <div class="hotspot" style="top: 65%; left: 16%;" data-id="41"></div>
+    <div class="hotspot" style="top: 80%; left: 16%;" data-id="51"></div>
+  </div>
+
+  <!-- Modal / Gaveta Lateral de Detalhes -->
+  <div id="product-modal" class="modal hidden">
+    <div class="modal-content">
+      <span id="close-btn">&times;</span>
+      <h2 id="product-title">Nome do Produto</h2>
+      <span id="product-tag" class="tag">Categoria</span>
+      
+      <div class="product-images">
+        <img id="product-img" src="" alt="Produto">
+        <img id="nutrition-img" src="" alt="Tabela Nutricional">
+      </div>
+
+      <div class="workout-benefits">
+        <h3>Benefícios para o Treino</h3>
+        <p id="product-benefit">Descrição do uso e benefícios no treino.</p>
+      </div>
+
+      <table class="nutrition-table">
+        <thead>
+          <tr>
+            <th>Calorias</th>
+            <th>Proteínas</th>
+            <th>Carbos</th>
+            <th>Gorduras</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td id="kcal">-</td>
+            <td id="protein">-</td>
+            <td id="carbs">-</td>
+            <td id="fat">-</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
