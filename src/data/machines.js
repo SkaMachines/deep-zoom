@@ -21,7 +21,7 @@ export const machines = {
     id: "MAUA01",
     name: "",
     location: "",
-    image: "/img/machines/maua01.webp",
+    image: "/root/DELTAFIT.jpeg",
     slots: {}
   },
 
