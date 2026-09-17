@@ -1,0 +1,84 @@
+// Dados dos produtos fitness mapeados na imagem
+const produtos = {
+  "13": {
+    nome: "Energel Black (Probiótica)",
+    categoria: "Intra-Treino / Energia",
+    foto: "img/produtos/energel.jpg",
+    tabelaImg: "img/produtos/energel-tabela.jpg",
+    beneficio: "Carboidratos de rápida absorção com eletrólitos e cafeína. Ideal para repor energia e evitar cãibras durante treinos intensos.",
+    kcal: "110 kcal",
+    protein: "0g",
+    carbs: "27g",
+    fat: "0g"
+  },
+  "22": {
+    nome: "Barra de Proteína YoPRO",
+    categoria: "Pós-Treino / Recuperação",
+    foto: "img/produtos/yopro-bar.jpg",
+    tabelaImg: "img/produtos/yopro-tabela.jpg",
+    beneficio: "Aporte proteico prático para síntese proteica e reconstrução muscular logo após o treino.",
+    kcal: "160 kcal",
+    protein: "15g",
+    carbs: "12g",
+    fat: "5g"
+  },
+  "41": {
+    nome: "Gatorade Açaí/Guaraná",
+    categoria: "Hidratação / Reposição",
+    foto: "img/produtos/gatorade.jpg",
+    tabelaImg: "img/produtos/gatorade-tabela.jpg",
+    beneficio: "Repõe água, sódio e potássio perdidos no suor. Mantém a hidratação e o rendimento em treinos aeróbicos longos.",
+    kcal: "120 kcal",
+    protein: "0g",
+    carbs: "30g",
+    fat: "0g"
+  },
+  "51": {
+    nome: "Monster Energy Ultra",
+    categoria: "Pré-Treino / Foco",
+    foto: "img/produtos/monster-ultra.jpg",
+    tabelaImg: "img/produtos/monster-tabela.jpg",
+    beneficio: "Zero açúcar com cafeína e taurina. Aumenta a disposição, melhora o foco mental e reduz a percepção de fadiga.",
+    kcal: "10 kcal",
+    protein: "0g",
+    carbs: "2g",
+    fat: "0g"
+  }
+};
+
+// Inicialização do Panzoom
+const elem = document.getElementById('vending-img');
+const panzoom = Panzoom(elem, {
+  maxScale: 5,
+  minScale: 1,
+  contain: 'outside'
+});
+
+elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+
+// Interatividade dos Hotspots
+document.querySelectorAll('.hotspot').forEach(hotspot => {
+  hotspot.addEventListener('click', (e) => {
+    const id = e.target.getAttribute('data-id');
+    const prod = produtos[id];
+
+    if (prod) {
+      document.getElementById('product-title').innerText = prod.nome;
+      document.getElementById('product-tag').innerText = prod.categoria;
+      document.getElementById('product-img').src = prod.foto;
+      document.getElementById('nutrition-img').src = prod.tabelaImg;
+      document.getElementById('product-benefit').innerText = prod.beneficio;
+      document.getElementById('kcal').innerText = prod.kcal;
+      document.getElementById('protein').innerText = prod.protein;
+      document.getElementById('carbs').innerText = prod.carbs;
+      document.getElementById('fat').innerText = prod.fat;
+
+      document.getElementById('product-modal').classList.remove('hidden');
+    }
+  });
+});
+
+// Fechar modal
+document.getElementById('close-btn').addEventListener('click', () => {
+  document.getElementById('product-modal').classList.add('hidden');
+});
