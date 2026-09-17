@@ -1,6 +1,120 @@
 // Dados dos produtos fitness mapeados na imagem
 const produtos = {
-  "13": {
+  export const products = {
+
+  "MONSTER-ULTRA-473ML": {
+    id: "MONSTER-ULTRA-473ML",
+    name: "Monster Ultra",
+    brand: "Monster",
+    category: "Energia",
+    volume: "473 ml",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "ALGES-CHEDDAR-200G": {
+    id: "ALGES-CHEDDAR-200G",
+    name: "Alges Cheddar",
+    brand: "Alges",
+    category: "Lanches",
+    volume: "200 g",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "ALGES-BARBECUE-200G": {
+    id: "ALGES-BARBECUE-200G",
+    name: "Alges Barbecue",
+    brand: "Alges",
+    category: "Lanches",
+    volume: "200 g",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "PRINGLES-ORIGINAL-150G": {
+    id: "PRINGLES-ORIGINAL-150G",
+    name: "Pringles Original",
+    brand: "Pringles",
+    category: "Lanches",
+    volume: "150 g",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "RUFFLES": {
+    id: "RUFFLES",
+    name: "Ruffles",
+    brand: "Ruffles",
+    category: "Lanches",
+    volume: "",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "KITKAT": {
+    id: "KITKAT",
+    name: "KitKat",
+    brand: "KitKat",
+    category: "Chocolates",
+    volume: "",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "AGUA": {
+    id: "AGUA",
+    name: "Água",
+    brand: "",
+    category: "Bebidas",
+    volume: "",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  },
+
+  "GATORADE": {
+    id: "GATORADE",
+    name: "Gatorade",
+    brand: "Gatorade",
+    category: "Bebidas",
+    volume: "",
+    description: "",
+    benefits: [],
+    specifications: {},
+    image: "",
+    gallery: [],
+    available: true
+  }
+};
+"13": {
     nome: "Energel Black (Probiótica)",
     categoria: "Intra-Treino / Energia",
     foto: "img/produtos/energel.jpg",
