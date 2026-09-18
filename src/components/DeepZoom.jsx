@@ -9,7 +9,7 @@ import HotspotLayer from './HotspotLayer';
 import ProductCard from './ProductCard';
 import './deep-zoom.css';
 
-const DeepZoom = ({ machineImage = '/images/deltafit.jpeg' }) => {
+const DeepZoom = ({ machineImage = '/public/images/deltafit.jpeg' }) => {
   const [zoom, setZoom] = useState(1);
   const [panX, setPanX] = useState(0);
   const [panY, setPanY] = useState(0);
