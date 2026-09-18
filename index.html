@@ -4,21 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DELTAFIT - Deep Zoom</title>
-  <!-- Carrega o React direto no navegador -->
+  <!-- Carrega as bibliotecas do React -->
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
-  <!-- Carrega o Babel para entender os arquivos .jsx -->
+  <!-- Carrega o Babel para entender JSX no navegador -->
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  <link rel="stylesheet" href="deep-zoom.css">
+  <style>
+    body { margin: 0; padding: 0; overflow: hidden; }
+  </style>
 </head>
 <body>
   <div id="root"></div>
 
-  <!-- Carrega o React na tela -->
+  <!-- Carrega o App React -->
   <script type="text/babel">
-    // Garante que o componente seja renderizado
+    import App from './App.jsx';
     ReactDOM.createRoot(document.getElementById('root')).render(
-      <h1>Sua máquina DeltaFit está pronta!</h1>
+      <App />
     );
   </script>
 </body>
